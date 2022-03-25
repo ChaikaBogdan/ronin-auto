@@ -22,6 +22,6 @@ const loginPage = new LoginPage();
 
 before(function () {
   cy.fixture("user").then((user) => {
-    loginPage.signIn(user.email, user.password);
+    loginPage.auth(user.email, user.password);
   });
 });

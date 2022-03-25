@@ -22,13 +22,15 @@ class LoginPage {
     cy.get(this.emailInput).clear().type(email);
     cy.get(this.passwordInput).clear().type(password);
     cy.get(this.signInButton).click();
-    this.preserveLocalStorage();
     return new SalesPage();
   }
 
-  preserveLocalStorage() {
-    cy.wait(5000);
+  auth(email, password) {
+    const salesPage = this.signIn(email, password);
+    salesPage.interseptSalesOrderOpenLists();
+    salesPage.waitForOrders();
     cy.saveLocalStorage("auth");
+    return salesPage;
   }
 }
 

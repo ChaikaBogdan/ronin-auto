@@ -2,8 +2,18 @@ class SalesPage {
   constructor() {}
 
   visit() {
+    this.interseptSalesOrderOpenLists();
     cy.visit(Cypress.env("salesRoute"));
     this.verifyOnSalesPage();
+    this.waitForOrders();
+  }
+
+  interseptSalesOrderOpenLists() {
+    cy.intercept("GET", Cypress.env("salesOrderOpenListsAPI")).as("orders");
+  }
+
+  waitForOrders() {
+    cy.wait("@orders");
   }
 
   verifyOnSalesPage() {
