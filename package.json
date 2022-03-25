@@ -1,0 +1,28 @@
+{
+  "name": "ronin-auto",
+  "version": "1.0.0",
+  "description": "ronin-auto",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaikaBogdan/ronin-auto.git"
+  },
+  "keywords": [
+    "qa",
+    "test",
+    "automation",
+    "cypress"
+  ],
+  "author": "Bogdan Bashev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChaikaBogdan/ronin-auto/issues"
+  },
+  "homepage": "https://github.com/ChaikaBogdan/ronin-auto#readme",
+  "devDependencies": {
+    "cypress": "^9.5.2"
+  }
+}
