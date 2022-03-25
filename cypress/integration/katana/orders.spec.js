@@ -1,7 +1,14 @@
 /// <reference types="cypress" />
 
-describe("Order", () => {
-  beforeEach(() => {});
+import OrdersPage from "../../pages/orders";
+const ordersPage = new OrdersPage();
 
-  it("test2", () => {});
+describe("Orders", () => {
+  beforeEach(() => {
+    cy.restoreLocalStorage("auth");
+  });
+
+  it("Open Orders page", () => {
+    ordersPage.visit();
+  });
 });

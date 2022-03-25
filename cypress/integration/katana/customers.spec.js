@@ -1,22 +1,14 @@
 /// <reference types="cypress" />
-import CustomersPage from "../../pages/customers";
-import LoginPage from "../../pages/login";
 
-const loginPage = new LoginPage();
+import CustomersPage from "../../pages/customers";
 const customersPage = new CustomersPage();
 
-describe("Customer Creation", () => {
+describe("Customers", () => {
   beforeEach(() => {
     cy.restoreLocalStorage("auth");
   });
 
-  before(() => {
-    cy.fixture("user").then((user) => {
-      loginPage.signIn(user.email, user.password);
-    });
-  });
-
-  it("test1", () => {
+  it("Open customers page", () => {
     customersPage.visit();
   });
 });

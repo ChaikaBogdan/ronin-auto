@@ -3,6 +3,7 @@ class SalesPage {
 
   visit() {
     cy.visit(Cypress.env("salesRoute"));
+    this.verifyOnSalesPage();
   }
 
   verifyOnSalesPage() {

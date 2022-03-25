@@ -14,7 +14,14 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
-
+import "./commands";
+import LoginPage from "../pages/login";
+const loginPage = new LoginPage();
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+before(function () {
+  cy.fixture("user").then((user) => {
+    loginPage.signIn(user.email, user.password);
+  });
+});
