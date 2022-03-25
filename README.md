@@ -24,4 +24,6 @@ They configured as GitHub prod enviroment secrets
 # How about Docker?
 Not part of this assigment, but feel free to check my other [Playwright repo](https://github.com/ChaikaBogdan/starman-auto) for example 
 
- 
+# Insights
+- I am using [cypress-localstorage-commands](https://www.npmjs.com/package/cypress-localstorage-commands) plugin to keep user signed in [between tests](https://github.com/ChaikaBogdan/ronin-auto/blob/main/cypress/support/index.js#L23). Its probably can be done better for example stripping token from redirect url after sign-in.
+
