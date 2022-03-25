@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ChaikaBogdan/ronin-auto#readme",
   "devDependencies": {
-    "cypress": "^9.5.2"
+    "cypress": "^9.5.2",
+    "cypress-localstorage-commands": "^1.7.0"
   }
 }
