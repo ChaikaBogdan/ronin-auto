@@ -21,7 +21,5 @@ const loginPage = new LoginPage();
 // require('./commands')
 
 before(function () {
-  cy.fixture("user").then((user) => {
-    loginPage.auth(user.email, user.password);
-  });
+  cy.beforeAllSpecs();
 });

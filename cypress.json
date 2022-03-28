@@ -1,3 +1,5 @@
 {
-  "baseUrl": "https://factory.katanamrp.com"
+  "baseUrl": "https://factory.katanamrp.com",
+  "requestTimeout": 10000,
+  "defaultCommandTimeout": 10000
 }

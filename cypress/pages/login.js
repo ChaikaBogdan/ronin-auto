@@ -27,8 +27,9 @@ class LoginPage {
 
   auth(email, password) {
     const salesPage = this.signIn(email, password);
-    salesPage.interseptSalesOrderOpenLists();
+    salesPage.interceptSalesOrderOpenLists();
     salesPage.waitForOrders();
+    // TODO: it can be done using token from redirect also
     cy.saveLocalStorage("auth");
     return salesPage;
   }

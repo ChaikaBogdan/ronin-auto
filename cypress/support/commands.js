@@ -25,3 +25,24 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import "cypress-localstorage-commands";
+import LoginPage from "../pages/login";
+const loginPage = new LoginPage();
+import SalesPage from "../pages/sales";
+const salesPage = new SalesPage();
+import ItemsPage from "../pages/items";
+const itemsPage = new ItemsPage();
+import ContactsCustomersPage from "../pages/contactsCustomers";
+const contactsCustomersPage = new ContactsCustomersPage();
+
+Cypress.Commands.add("beforeAllSpecs", () => {
+  cy.fixture("user").then((user) => {
+    // TODO: it can be done much better with pre-seed of test user
+    loginPage.auth(user.email, user.password);
+    salesPage.visit();
+    salesPage.deleteAllSales();
+    itemsPage.visit();
+    itemsPage.deleteAllItems();
+    contactsCustomersPage.visit();
+    contactsCustomersPage.deleteAllCustomers();
+  });
+});
