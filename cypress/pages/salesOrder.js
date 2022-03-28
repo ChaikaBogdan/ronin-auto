@@ -63,7 +63,7 @@ class SalesOrder {
     cy.get(this.createNewItemConfirm).click();
     cy.get(this.uomInput).type("cm{enter}");
     cy.get(this.saveItemButton).click();
-    cy.get(this.status).click();
+    cy.get(this.status).click({ force: true });
     this.verifyOrderSavedStatus();
   }
 

@@ -37,7 +37,7 @@ class CustomerPage {
       delay: 100,
     });
     cy.get(this.companyNameInput).type(faker.company.companyName());
-    cy.get(this.status).click();
+    cy.get(this.status).click({ force: true });
     this.verifyCustomerSavedStatus();
   }
 
