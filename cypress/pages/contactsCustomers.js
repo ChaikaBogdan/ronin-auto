@@ -30,8 +30,8 @@ class contactsCustomersPage {
         // TODO: it can be done using delete request also
         cy.get(this.customersCheckbox).as("checkboxes");
         cy.get("@checkboxes").check({ force: true });
-        cy.get(this.bundleActions).click();
-        cy.get(this.deleteAction).click();
+        cy.get(this.bundleActions).click({ force: true });
+        cy.get(this.deleteAction).click({ force: true });
         cy.wait("@delete");
       }
     });
