@@ -40,7 +40,7 @@ describe("Sales Orders", () => {
     salesPage.visit();
     salesPage.expectOrder(firstName, lastName);
     const orderPage = salesPage.inspectOrder(firstName, lastName);
-    orderPage.editAddress("Kai 1", 10111);
+    orderPage.editAddress("Kai 1, Tallinn, Estonia", 10111);
     orderPage.setupOrderInfoIntercept();
     cy.reload();
     orderPage.verifyBillingAdresAPI("1 Kai");
