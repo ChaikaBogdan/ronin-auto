@@ -26,4 +26,4 @@ Not part of this assigment, but feel free to check my other [Playwright repo](ht
 
 # Insights
 - I am using [cypress-localstorage-commands](https://www.npmjs.com/package/cypress-localstorage-commands) plugin to keep user signed in [between tests](https://github.com/ChaikaBogdan/ronin-auto/blob/main/cypress/support/index.js#L23). Its probably can be done better for example stripping token from redirect url after sign-in.
-
+- Cypress free plan for Dashboard is a trash. I depleted 500 test results in few hours and there is no cheap personal plan...but its working in [nutshell](https://github.com/ChaikaBogdan/ronin-auto/actions/runs/2040090113)
